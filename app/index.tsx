@@ -1,38 +1,39 @@
-import { Text, View, StyleSheet, TextInput } from "react-native";
+import { Text, View, StyleSheet, TextInput,ScrollView } from "react-native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 const Stack = createNativeStackNavigator();
 
+import { Map } from "../app-example/components/Map/Map";
+
+
 import {useState} from "react";
 
-const [email,setEmail] = useState("");
-const [password,setPassword] = useState("");
 
-
-const handleChange  = (e) => {
-   setEmail(e.target.value);
-}
-
-const handlePassword  = (e) => {
-  setPassword(e.target.value);
-}
 
 
 function HomeScreen() {
+  const [email,setEmail] = useState("");
+  const [password,setPassword] = useState("");
+
+
+
+
+
   return (
-    <View style={styles.container}>
+      <ScrollView contentContainerStyle={styles.container}>
+   
+         <Map/>
+
+
 
       <Text>Rohit </Text>
-
       <Text> Vishwakarm </Text>
-
-        <Text>Coder  </Text>
-
+      <Text>Coder  </Text>
       <Text> Gpt </Text>
 
       <TextInput
       placeholder = "enter name "
       value = {email}
-      onChange  = {handleChange}
+      onChangeText  = {setEmail}
       
       />
 
@@ -40,7 +41,7 @@ function HomeScreen() {
  <TextInput
       placeholder = "Enter password "
       value = {password}
-      onChange  = {handlePassword}
+      onChangeText  = {setPassword}
       
       />
 
@@ -51,7 +52,8 @@ function HomeScreen() {
 
 
 
-    </View>
+    {/* </View> */}
+    </ScrollView>
   );
 }
 
@@ -93,8 +95,10 @@ export default function Index() {
 const styles = StyleSheet.create({
   container: {
     flex: 1, 
-    backgroundColor: "#b61d1d", 
+    backgroundColor: "#796d6d", 
     alignItems: "center",
     justifyContent: "center",
+    fontWeight: 'bold',
+    fontSize : 20
   },
 });
