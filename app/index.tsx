@@ -2,7 +2,7 @@ import { Text, View, StyleSheet, TextInput,ScrollView } from "react-native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 const Stack = createNativeStackNavigator();
 
-import { Map } from "../app-example/components/Map/Map";
+import  Map  from "../app-example/components/Map/Map";
 
 
 import {useState} from "react";
