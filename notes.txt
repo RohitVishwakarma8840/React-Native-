@@ -1,0 +1,4 @@
+npx expo start --tunnel  for connecting in network errors 
+
+npx expo start -c  =>  for clearing the cache we do that  
+
